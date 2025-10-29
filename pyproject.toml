@@ -1,0 +1,28 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+
+[dependency-groups]
+dev = [
+  "pylint-pydantic (>=0.4.1,<0.5.0)"
+]
+
+[project]
+authors = [
+  {email = "zhulikovnikita884@gmail.com", name = "nikitazulikov"}
+]
+dependencies = [
+  "black (>=25.9.0,<26.0.0)",
+  "flake8 (>=7.3.0,<8.0.0)",
+  "flake8-pyproject (>=1.2.3,<2.0.0)",
+  "isort (>=7.0.0,<8.0.0)",
+  "mypy (>=1.18.2,<2.0.0)",
+  "pylint (>=4.0.2,<5.0.0)",
+  "pytest (>=8.4.2,<9.0.0)",
+  "toml-sort (>=0.24.3,<0.25.0)"
+]
+description = ""
+name = "amocrm-gsheets-integration"
+readme = "README.md"
+requires-python = ">=3.13"
+version = "0.1.0"
