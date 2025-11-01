@@ -27,6 +27,8 @@ def init_token_manager() -> None:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
     token_dir = os.path.join(BASE_DIR, ".amocrm_tokens")
 
+    os.makedirs(token_dir, exist_ok=True)
+
     tokens.default_token_manager(
         client_id=settings.AMO_CLIENT_ID,
         client_secret=settings.AMO_CLIENT_SECRET,
