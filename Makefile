@@ -32,3 +32,15 @@ test-cov:
 ## dev: run format, lint
 .PHONY: dev
 dev: format lint
+
+## redis-up: start Redis container
+.PHONY: redis-up
+redis-up:
+	docker-compose up -d redis
+	@echo "Redis запущен на порту 6379"
+
+## redis-down: stop Redis container
+.PHONY: redis-down
+redis-down:
+	docker-compose down
+	@echo "Redis остановлен"
